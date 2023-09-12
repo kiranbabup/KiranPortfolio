@@ -3,7 +3,11 @@ import { assets } from '../../assets/assets';
 import htmlCssImage from "../../assets/html-css.png";
 import localStorageImage from "../../assets/localstorage.png"
 import mernImage from "../../assets/mern.png";
+import { useNavigate } from 'react-router-dom';
+
 function Body() {
+  const navigate = useNavigate();
+
   return (
     <div className="body">
       <section>
@@ -26,9 +30,24 @@ function Body() {
       </article>
       <h2>My Projects</h2>
       <article className='projectDetails'>
-        <div className='projectInfo'><button> <img src={htmlCssImage} alt="png" /> </button> <h5>Click the Logo to view the Projects which are built using HTML & CSS</h5></div>
-        <div className='projectInfo'><button> <img src={localStorageImage} alt="png" /> </button><h5>Click the Logo to view the Projects which are built using HTML, CSS, Zustand & LocalStorage</h5></div>
-        <div className='projectInfo'><button> <img src={mernImage} alt="png" /> </button><h5>Click the Logo to view the Projects which are built using MongoDB, Express, ReactJS & NodeJS</h5></div>
+        <div className='projectInfo'>
+          <button onClick={() => navigate('/projects')}>
+            <img src={htmlCssImage} alt="png" />
+          </button>
+          <h5>Click the Logo to view the Projects which are built using HTML & CSS</h5>
+        </div>
+        <div className='projectInfo'>
+          <button>
+            <img src={localStorageImage} alt="png" />
+          </button>
+          <h5>Click the Logo to view the Projects which are built using HTML, CSS, Zustand & LocalStorage</h5>
+        </div>
+        <div className='projectInfo'>
+          <button>
+            <img src={mernImage} alt="png" />
+          </button>
+          <h5>Click the Logo to view the Projects which are built using MongoDB, Express, ReactJS & NodeJS</h5>
+        </div>
       </article>
     </div>
   );
