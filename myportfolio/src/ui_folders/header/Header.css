@@ -6,7 +6,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image:linear-gradient(rgb(54, 47, 248), rgba(94, 105, 139, 0.66), rgba(107, 206, 215, 0.836),rgba(186, 200, 243, 0.66), rgb(11, 11, 11));
+    background-image: linear-gradient(blue,
+            rgba(133, 77, 255, 0.66),
+            rgba(126, 47, 252, 0.836),
+            rgba(206, 64, 249, 0.66),
+            rgb(255, 2, 208));
     background-color: gainsboro;
     gap: 5rem;
 }
